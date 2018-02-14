@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 7]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+  <!-- Start of Baidu Transcode -->
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="MobileOptimized" content="width"/>
+  <meta name="HandheldFriendly" content="true"/>
+  <meta name="mobile-agent" content="format=html5;url=https://www.jianshu.com/p/05289a4bc8b2">
+  <!-- End of Baidu Transcode -->
+
+    <meta name="description"  content="摘要：这是一篇很详尽的独立博客搭建教程，里面介绍了域名注册、DNS 设置、GitHub 和 Jekyll 设置等过程，这是我写得最长的一篇教程。我想将我搭建独立博客的过程在一篇文章中尽可能详细地写出来，希望能给后来者一个明确的指引，同时用这篇教程开篇，正式开始我的第八大洲之旅。 前言 作为一个技术小白，没有技术基础，看网上的教程也云里雾里，看程序员的教程相当不容易，稍微有些细节描述得不清楚自...">
+
+  <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8" />
+  <meta property="wb:webmaster" content="294ec9de89e7fadb" />
+  <meta property="qc:admins" content="104102651453316562112116375" />
+  <meta property="qc:admins" content="11635613706305617" />
+  <meta property="qc:admins" content="1163561616621163056375" />
+  <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4" />
+  <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI" />
+  <meta http-equiv="mobile-agent" content="format=html5; url=https://www.jianshu.com/p/05289a4bc8b2">
+
+  <!-- Apple -->
+  <meta name="apple-mobile-web-app-title" content="简书">
+
+    <!--  Meta for Smart App Banner -->
+  <meta name="apple-itunes-app" content="app-id=888237539, app-argument=jianshu://notes/154777">
+  <!-- End -->
+
+  <!--  Meta for Twitter Card -->
+  <meta content="summary" property="twitter:card">
+  <meta content="@jianshucom" property="twitter:site">
+  <meta content="如何搭建一个独立博客——简明Github Pages与Hexo教程" property="twitter:title">
+  <meta content="摘要：这是一篇很详尽的独立博客搭建教程，里面介绍了域名注册、DNS 设置、GitHub 和 Jekyll 设置等过程，这是我写得最长的一篇教程。我想将我搭建独立博客的过程在一..." property="twitter:description">
+  <meta content="https://www.jianshu.com/p/05289a4bc8b2" property="twitter:url">
+  <!-- End -->
+
+  <!--  Meta for OpenGraph -->
+  <meta property="fb:app_id" content="865829053512461">
+  <meta property="og:site_name" content="简书">
+  <meta property="og:title" content="如何搭建一个独立博客——简明Github Pages与Hexo教程">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.jianshu.com/p/05289a4bc8b2">
+  <meta property="og:description" content="摘要：这是一篇很详尽的独立博客搭建教程，里面介绍了域名注册、DNS 设置、GitHub 和 Jekyll 设置等过程，这是我写得最长的一篇教程。我想将我搭建独立博客的过程在一篇文章中尽可能详细地...">
+  <!-- End -->
+
+  <!--  Meta for Facebook Applinks -->
+  <meta property="al:ios:url" content="jianshu://notes/154777" />
+  <meta property="al:ios:app_store_id" content="888237539" />
+  <meta property="al:ios:app_name" content="简书" />
+
+  <meta property="al:android:url" content="jianshu://notes/154777" />
+  <meta property="al:android:package" content="com.jianshu.haruki" />
+  <meta property="al:android:app_name" content="简书" />
+  <!-- End -->
+
+
+    <title>如何搭建一个独立博客——简明Github Pages与Hexo教程 - 简书</title>
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="QDJNTFFguD+oGGwPoA7uWNKGxkf6mM3Akg2/DneT9vjD+soqr2zB77HUuqw99Fu8G+VsWWZzIQnPcYNZ/dIcxA==" />
+
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web-2b4b94dda52e8beee722.css" />
+  
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web/pages/notes/show/entry-ba0a764c96572c00916e.css" />
+
+  <link href="//cdn2.jianshu.io/assets/favicons/favicon-e743bfb1821442341c3ab15bdbe804f7ad97676bd07a770ccc9483473aa76f06.ico" rel="shortcut icon" type="image/x-icon">
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/57-a6f1f1ee62ace44f6dc2f6a08575abd3c3b163288881c78dd8d75247682a4b27.png" sizes="57x57" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/72-fb9834bcfce738fd7b9c5e31363e79443e09a81a8e931170b58bc815387c1562.png" sizes="72x72" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/76-49d88e539ff2489475d603994988d871219141ecaa0b1a7a9a1914f4fe3182d6.png" sizes="76x76" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/114-24252fe693524ed3a9d0905e49bff3cbd0228f25a320aa09053c2ebb4955de97.png" sizes="114x114" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/120-1bb7371f5e87f93ce780a5f1a05ff1b176828ee0d1d130e768575918a2e05834.png" sizes="120x120" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/152-bf209460fc1c17bfd3e2b84c8e758bc11ca3e570fd411c3bbd84149b97453b99.png" sizes="152x152" />
+
+  <!-- Start of 访问统计 -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+  <!-- End of 访问统计 -->
+</head>
+
+  <body lang="zh-CN" class="reader-black-font">
+    <!-- 全局顶部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="width-limit">
+    <!-- 左上方 Logo -->
+    <a class="logo" href="/"><img src="//cdn2.jianshu.io/assets/web/nav-logo-4c7bbafe27adc892f3046e6978459bac.png" alt="Nav logo" /></a>
+
+    <!-- 右上角 -->
+      <!-- 未登录显示登录/注册/写文章 -->
+      <a class="btn write-btn" target="_blank" href="/writer#/">
+        <i class="iconfont ic-write"></i>写文章
+</a>      <a class="btn sign-up" href="/sign_up">注册</a>
+      <a class="btn log-in" href="/sign_in">登录</a>
+
+    <!-- 如果用户登录，显示下拉菜单 -->
+
+    <div id="view-mode-ctrl">
+    </div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav">
+            <li class="tab ">
+              <a href="/">
+                <span class="menu-text">首页</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+</a>            </li>
+            <li class="tab ">
+              <a id="web-nav-app-download-btn" class="app-download-btn" href="/apps?utm_medium=desktop&amp;utm_source=navbar-apps"><span class="menu-text">下载App</span><i class="iconfont ic-navigation-download menu-icon"></i></a>
+            </li>
+          <li class="search">
+            <form target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="q" id="q" value="" autocomplete="off" placeholder="搜索" class="search-input" />
+              <a class="search-btn" href="javascript:void(null)"><i class="iconfont ic-search"></i></a>
+</form>          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+<div class="note">
+  <a target="_blank" href="/apps/download?utm_source=sbc" id="web-note-ad-fixed"><span class="close">&times;</span></a>
+  <div class="post">
+    <div class="article">
+        <h1 class="title">如何搭建一个独立博客——简明Github Pages与Hexo教程</h1>
+
+        <!-- 作者区域 -->
+        <div class="author">
+          <a class="avatar" href="/u/c30afb47d730">
+            <img src="//upload.jianshu.io/users/upload_avatars/32598/%E7%BA%A2%E5%BF%83%E6%B5%B7%E8%B4%BC%E5%9B%A2__%E6%AD%A3.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>          <div class="info">
+            <span class="name"><a href="/u/c30afb47d730">陈素封</a></span>
+              <img class="badge-icon" data-toggle="tooltip" title="简书科技优秀作者" src="//upload.jianshu.io/user_badge/db3aaf4f-effd-43dc-9137-d6bf7f70211e" alt="Db3aaf4f effd 43dc 9137 d6bf7f70211e" />
+            <!-- 关注用户按钮 -->
+            <div props-data-classes="user-follow-button-header" data-author-follow-button></div>
+            <!-- 文章数据信息 -->
+            <div class="meta">
+              <!-- 如果文章更新时间大于发布时间，那么使用 tooltip 显示更新时间 -->
+                <span class="publish-time" data-toggle="tooltip" data-placement="bottom" title="最后编辑于 2017.11.26 22:26">2014.05.11 18:59*</span>
+              <span class="wordage">字数 3588</span>
+            </div>
+          </div>
+          <!-- 如果是当前作者，加入编辑按钮 -->
+        </div>
+
+        <!-- 文章内容 -->
+        <div data-note-content class="show-content">
+          <div class="show-content-free">
+            <p>摘要：这是一篇很详尽的独立博客搭建教程，里面介绍了域名注册、DNS 设置、GitHub 和 Jekyll 设置等过程，这是我写得最长的一篇教程。我想将我搭建独立博客的过程在一篇文章中尽可能详细地写出来，希望能给后来者一个明确的指引，同时用这篇教程开篇，正式开始我的<a href="https://link.jianshu.com?t=http://www.douban.com/note/523589521/" target="_blank" rel="nofollow">第八大洲之旅</a>。</p>
+<h2>前言</h2>
+<p>作为一个技术小白，没有技术基础，看网上的教程也云里雾里，看程序员的教程相当不容易，稍微有些细节描述得不清楚自己就要绕弯路去找答案（善用搜索引擎），所以，在自己的博客搭建完成之后，我决定要将我搭建博客的过程全记录下来，以供后期和我一样的小白参考（是的，我坚信还有很多一样和我一样的人），我会尽可能详细的整理这个教程，其中的资料可能会摘录到其他人的教程，我会在后面列出了参考资料，感谢这些作者们。</p>
+<p>为什么要开博客？可以看看我的这篇<a href="https://link.jianshu.com?t=http://zhuanlan.zhihu.com/cnfeat/19743861" target="_blank" rel="nofollow">《为什么你要写博客？》</a></p>
+<p>也可以看看这篇<a href="https://link.jianshu.com?t=http://zhuanlan.zhihu.com/cnfeat/19743255" target="_blank" rel="nofollow">《我的博客时代》</a></p>
+<p>以下以我的博客：<a href="https://link.jianshu.com?t=http://www.cnfeat.com" target="_blank" rel="nofollow">www.cnfeat.com</a>为例，教大家如何搭建一个独立博客。</p>
+<h2>为什么要搭建一个独立博客?</h2>
+<p>独立的才是自己的。</p>
+<h2>小白进入门槛</h2>
+<ul>
+<li>1、非常折腾，需要耐心；</li>
+<li>2、也需要一定的学习能力和钻研精神；</li>
+<li>3、懂一些网页基础知识，不懂也重要，参看第二和第三条；</li>
+</ul>
+<h2>为什么选择 <a href="https://link.jianshu.com?t=https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a> ？</h2>
+<p>很多人用 Wordpress，你为什么要用 GitHub Pages 来搭建？</p>
+<ul>
+<li>1、GitHub Pages 有 300M 免费空间，资料自己管理，保存可靠；</li>
+<li>2、学着用 GitHub，享受 GitHub 的便利，上面有很多大牛，眼界会开阔很多；</li>
+<li>3、顺便看看 GitHub 工作原理，最好的团队协作流程；</li>
+<li>4、GitHub 是趋势；</li>
+<li>5、你不觉得一个文科生用 GitHub 很 Geek 吗？瞬间跻身技术界；</li>
+</ul>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 438px;">
+<div class="image-container-fill" style="padding-bottom: 51.59%;"></div>
+<div class="image-view" data-width="849" data-height="438"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-33c5e1c4c2d28724.jpg" data-original-width="849" data-original-height="438" data-original-format="image/jpeg" data-original-filesize="127683"></div>
+</div>
+<div class="image-caption">&gt; 01 GitHub Pages 图片</div>
+</div>
+<h2>GitHub Pages 是什么？</h2>
+<p><a href="https://link.jianshu.com?t=https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages </a>本用于介绍托管在 GitHub 的项目， 不过，由于他的空间免费稳定，用来做搭建一个博客再好不过了。</p>
+<blockquote>
+<p>GitHub Pages 可以被认为是用户编写的、托管在 GitHub 上的静态网页。</p>
+</blockquote>
+<p>官方介绍可以看这个视频（需科学上网）</p>
+<p>&lt;div style="position:relative;height:0;padding-bottom:56.27%"&gt;&lt;iframe src="https://www.youtube.com/embed/2MsN8gpT6jY?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</p>
+<h2>购买域名</h2>
+<p>只推荐上 <a href="https://link.jianshu.com?t=https://www.GoDaddy.com/" target="_blank" rel="nofollow">GoDaddy</a> 购买，安全，而且可以使用支付宝。</p>
+<p>现在 GoDaddy 已经有<a href="https://link.jianshu.com?t=https://sg.godaddy.com/zh/" target="_blank" rel="nofollow">中文版</a>了，虽然国家显示是新加坡，但不影响使用。</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 352px;">
+<div class="image-container-fill" style="padding-bottom: 50.32%;"></div>
+<div class="image-view" data-width="1890" data-height="951"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-161647d283e99513.jpg" data-original-width="1890" data-original-height="951" data-original-format="image/jpeg" data-original-filesize="632223"></div>
+</div>
+<div class="image-caption">&gt; 02 GoDaddy 主页界面</div>
+</div>
+<p>教程（截止至 2017 年 06 月 21 日）如下</p>
+<p><strong>1、查你想要的域名</strong>；</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 362px;">
+<div class="image-container-fill" style="padding-bottom: 44.47%;"></div>
+<div class="image-view" data-width="814" data-height="362"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-28a1bf78270c4c9d.jpg" data-original-width="814" data-original-height="362" data-original-format="image/jpeg" data-original-filesize="192911"></div>
+</div>
+<div class="image-caption">&gt; 03 GoDaddy cnfeat 2017 搜索</div>
+</div>
+<p><strong>2、查到适合的域名之后选择「添加到购物车」</strong>；</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 457px;">
+<div class="image-container-fill" style="padding-bottom: 47.21%;"></div>
+<div class="image-view" data-width="968" data-height="457"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-f39dcbe406f08e7c.jpg" data-original-width="968" data-original-height="457" data-original-format="image/jpeg" data-original-filesize="145538"></div>
+</div>
+<div class="image-caption">&gt; 04 添加到购物车</div>
+</div>
+<p><strong>3、GoDaddy 其他域名收费服务，不要管，继续「进入购物车」</strong>；</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 457px;">
+<div class="image-container-fill" style="padding-bottom: 58.440000000000005%;"></div>
+<div class="image-view" data-width="782" data-height="457"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-80d113afeb846936.jpg" data-original-width="782" data-original-height="457" data-original-format="image/jpeg" data-original-filesize="105910"></div>
+</div>
+<div class="image-caption">&gt; 05 进入购物车</div>
+</div>
+<p>后面的服务全部点击「不，谢谢」，免费的服务也不要用</p>
+<p><strong>4、确认购买</strong> 修改购买年限，默认是两年，可以修改成 1/2/3/5/10 年，随自己喜欢。现在 GoDaddy 上 .com 每年的默认费用是 7元/年。</p>
+<p>但实际上，你看到我现在购买的是 第 1 年：​¥5.86/年<br>
+第 2 年后：​¥101.00/年，GoDaddy 的域名价格时常有波动，以当时为准即可。</p>
+<p>个人博客，建议购买 5 年限，等到你 5 年后觉得还有必要，再 10 年续下去。</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 369px;">
+<div class="image-container-fill" style="padding-bottom: 35.83%;"></div>
+<div class="image-view" data-width="1030" data-height="369"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-318f3b02e6a9ed06.jpg" data-original-width="1030" data-original-height="369" data-original-format="image/jpeg" data-original-filesize="129379"></div>
+</div>
+<div class="image-caption">&gt; 06 购物车界面</div>
+</div>
+<p>如果你不是土豪，可以上网搜 <a href="https://link.jianshu.com?t=https://www.google.com/search?q=GoDaddy%20%E7%9A%84%E4%BC%98%E6%83%A0%E7%A0%81" target="_blank" rel="nofollow">GoDaddy 优惠码</a>，一般优惠幅度是 20%~ 30% 不等</p>
+<p>填完之后，五年的费用就从 415.56 会变成 333.95 元。</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 417px;">
+<div class="image-container-fill" style="padding-bottom: 41.699999999999996%;"></div>
+<div class="image-view" data-width="1000" data-height="417"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-dd3f7640e7ed1f6e.jpg" data-original-width="1000" data-original-height="417" data-original-format="image/jpeg" data-original-filesize="164259"></div>
+</div>
+<div class="image-caption">&gt; 07 价格变动图</div>
+</div>
+<p><strong>说明一下</strong>：网上的优惠码优惠不一，你可以逐个尝试拿个最低价，这里就不一一测试了。</p>
+<p>如图，我买了五年的费用就是 333.95 元，随后点击「前去付款」</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 362px;">
+<div class="image-container-fill" style="padding-bottom: 36.49%;"></div>
+<div class="image-view" data-width="992" data-height="362"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-af0744d22adcacfc.jpg" data-original-width="992" data-original-height="362" data-original-format="image/jpeg" data-original-filesize="132498"></div>
+</div>
+<div class="image-caption">&gt; 08 前去付款</div>
+</div>
+<p><strong>5、结算。</strong>登录或注册界面，填完必要的信息之后，选择用支付宝结算。</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 671px; max-height: 567px;">
+<div class="image-container-fill" style="padding-bottom: 84.5%;"></div>
+<div class="image-view" data-width="671" data-height="567"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-6aed34f64259d32a.jpg" data-original-width="671" data-original-height="567" data-original-format="image/jpeg" data-original-filesize="70046"></div>
+</div>
+<div class="image-caption">&gt; 09 结算前必须注册个账户</div>
+</div>
+<p>注册后页面跳转到结算页面</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 613px;">
+<div class="image-container-fill" style="padding-bottom: 58.269999999999996%;"></div>
+<div class="image-view" data-width="1052" data-height="613"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-56b32a1719fba3ef.jpg" data-original-width="1052" data-original-height="613" data-original-format="image/jpeg" data-original-filesize="143227"></div>
+</div>
+<div class="image-caption">&gt; 10 下订单</div>
+</div>
+<p>如果结算出现问题，可以<a href="https://link.jianshu.com?t=https://www.dute.me/godaddy-alipay.html" target="_blank" rel="nofollow">查看这个页面</a>。</p>
+<p><strong>6、检查。</strong>结算后，重新登录，去「我的账户 &gt; 我的产品」，域名已经显示在你的账户了。</p>
+<p><strong>7、补充一些注意事项：</strong></p>
+<ul>
+<li>输入优惠码没有优惠或者优惠幅度较低，请清除浏览器 cookies 再尝试；</li>
+<li>如果没有支付宝支付选项，有可能是使用的优惠码不支持支付宝，请重新清除浏览器 cookies 再尝试；</li>
+<li>注册时用户填写信息时一定要输入正确的邮箱名字，否则修改十分麻烦。</li>
+<li>买完域名之后一定要记得去自己的邮箱查看激活邮件，否则域名激活不了。</li>
+</ul>
+<h2>安装准备软件</h2>
+<p>依次下载安装。</p>
+<ul>
+<li>1、<a href="https://link.jianshu.com?t=http://nodejs.org/" target="_blank" rel="nofollow">Node.js</a>
+</li>
+<li>2、<a href="https://link.jianshu.com?t=http://git-scm.com/" target="_blank" rel="nofollow">Git</a>
+</li>
+</ul>
+<h2>怎么打开 Git ？</h2>
+<h3>Win 平台操作</h3>
+<ul>
+<li>1、开始菜单 Git Bash</li>
+<li>2、鼠标右键打开 Git Bash</li>
+</ul>
+<div class="image-package">
+<div class="image-container" style="max-width: 558px; max-height: 299px;">
+<div class="image-container-fill" style="padding-bottom: 53.580000000000005%;"></div>
+<div class="image-view" data-width="558" data-height="299"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-1ad01cdbcc40013f.jpg" data-original-width="558" data-original-height="299" data-original-format="image/jpeg" data-original-filesize="103784"></div>
+</div>
+<div class="image-caption">&gt; 12 鼠标右键打开 Git Bash</div>
+</div>
+<h3>Mac 平台操作</h3>
+<p>安装 Git 之后可直接在 Terminal 操作</p>
+<h2>注册 GitHub</h2>
+<p>访问：<a href="https://link.jianshu.com?t=http://www.GitHub.com/" target="_blank" rel="nofollow">http://www.GitHub.com/</a></p>
+<p>注册你的 username 和邮箱，邮箱十分重要，GitHub 上很多通知都是通过邮箱发送。</p>
+<p>注册过程比较简单，详细也可以看：</p>
+<p><a href="https://link.jianshu.com?t=http://www.pchou.info/ssgithubPage/2013-01-03-build-github-blog-page-01.html" target="_blank" rel="nofollow">一步步在 GitHub上创建博客主页 全系列</a> by pchou（推荐）</p>
+<h2>配置和使用 GitHub</h2>
+<p>以下教程主要参考 beiyuu 的<a href="https://link.jianshu.com?t=http://beiyuu.com/github-pages" target="_blank" rel="nofollow">《使用GitHub Pages建独立博客》</a>写成。</p>
+<h2>配置 SSH keys</h2>
+<p>我们如何让本地 git 项目与远程的 GitHub 建立联系呢？用 SSH keys。</p>
+<h3>检查 SSH keys的设置</h3>
+<p>首先我们需要检查你电脑上现有的 ssh key：</p>
+<pre><code>$ cd ~/.ssh 检查本机的ssh密钥
+</code></pre>
+<p>如果提示：No such file or directory 说明你是第一次使用 git。</p>
+<h3>生成新的 SSH Key：</h3>
+<pre><code>$ ssh-keygen -t rsa -C "邮件地址@youremail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;回车就好&gt;
+</code></pre>
+<ul>
+<li>注意 1: 此处的邮箱地址，你可以输入自己的邮箱地址；</li>
+<li>注意2: 此处的「-C」的是大写的「C」</li>
+</ul>
+<p>然后系统会要你输入密码：</p>
+<pre><code>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;
+Enter same passphrase again:&lt;再次输入加密串&gt;
+</code></pre>
+<p>在回车中会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。</p>
+<p>注意：输入密码的时候没有 * 字样的，你直接输入就可以了。</p>
+<p>最后看到这样的界面，就成功设置ssh key了：</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 544px; max-height: 289px;">
+<div class="image-container-fill" style="padding-bottom: 53.13%;"></div>
+<div class="image-view" data-width="544" data-height="289"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-cf2af2bff37b1031.jpg" data-original-width="544" data-original-height="289" data-original-format="image/jpeg" data-original-filesize="102269"></div>
+</div>
+<div class="image-caption">&gt; 13 终端设置成功</div>
+</div>
+<h3>添加 SSH Key 到 GitHub</h3>
+<p>在本机设置 SSH Key 之后，需要添加到 GitHub上，以完成 SSH 链接的设置。</p>
+<ul>
+<li><p>1、打开本地 id_rsa.pub 文件（ 参考地址 C:\Documents and Settings\Administrator.ssh\id_rsa.pub）。此文件里面内容为刚才生成的密钥。如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。</p></li>
+<li><p>2、登陆 GitHub 系统。点击右上角的 Account Settings---&gt;SSH Public keys ---&gt; add another public keys</p></li>
+<li><p>3、把你本地生成的密钥复制到里面（ key 文本框中）， 点击 add key 就ok了</p></li>
+</ul>
+<div class="image-package">
+<div class="image-container" style="max-width: 470px; max-height: 403px;">
+<div class="image-container-fill" style="padding-bottom: 85.74000000000001%;"></div>
+<div class="image-view" data-width="470" data-height="403"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-c8b55d62cc0dbd07.jpg" data-original-width="470" data-original-height="403" data-original-format="image/jpeg" data-original-filesize="102947"></div>
+</div>
+<div class="image-caption">&gt; 14 添加 SSH Key 到 GitHub</div>
+</div>
+<h3>测试</h3>
+<p>可以输入下面的命令，看看设置是否成功，<a href="https://link.jianshu.com?t=mailto:git@GitHub.com" target="_blank" rel="nofollow">git@GitHub.com</a> 的部分不要修改：</p>
+<pre><code>$ ssh -T git@GitHub.com
+</code></pre>
+<p>如果是下面的反馈：</p>
+<pre><code>The authenticity of host 'GitHub.com (207.97.227.239)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)?
+</code></pre>
+<p>不要紧张，输入 yes 就好，然后会看到：</p>
+<pre><code>Hi cnfeat! You've successfully authenticated, but GitHub does not provide shell access.
+</code></pre>
+<h3>设置用户信息</h3>
+<p>现在你已经可以通过 SSH 链接到 GitHub 了，还有一些个人信息需要完善的。</p>
+<p>Git 会根据用户的名字和邮箱来记录提交。GitHub 也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。</p>
+<pre><code>$ git config --global user.name "cnfeat"//用户名
+$ git config --global user.email  "cnfeat@gmail.com"//填写自己的邮箱
+</code></pre>
+<h3>SSH Key 配置成功</h3>
+<p>本机已成功连接到 GitHub。</p>
+<p>若有问题，请重新设置。常见错误请参考：</p>
+<ul>
+<li><a href="https://link.jianshu.com?t=http://help.GitHub.com/articles/generating-ssh-keys" target="_blank" rel="nofollow">GitHub Help - Generating SSH Keys</a></li>
+<li><a href="https://link.jianshu.com?t=http://help.GitHub.com/articles/error-permission-denied-publickey" target="_blank" rel="nofollow">GitHub Help - Error Permission denied (publickey)</a></li>
+</ul>
+<h2>将独立域名与 GitHub Pages 的空间绑定</h2>
+<h3>DNS 设置</h3>
+<p>用 DNSpod，快，免费，稳定。</p>
+<p>注册<a href="https://link.jianshu.com?t=www.dnspod.cn" target="_blank" rel="nofollow">DNSpod</a>，添加域名，如下图设置。</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 310px;">
+<div class="image-container-fill" style="padding-bottom: 39.489999999999995%;"></div>
+<div class="image-view" data-width="785" data-height="310"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-09fcc4770c0c4dbb.jpg" data-original-width="785" data-original-height="310" data-original-format="image/jpeg" data-original-filesize="80465"></div>
+</div>
+<div class="image-caption">&gt; 15 域名解析图</div>
+</div>
+<p>其中 A 的两条记录指向的ip地址是 GitHub Pages 的提供的 ip</p>
+<ul>
+<li>192.30.252.153</li>
+<li>192.30.252.154</li>
+</ul>
+<p>如博客不能登录，有可能是 GitHub 更改了空间服务的 ip 地址，记得及时到在<a href="https://link.jianshu.com?t=https://help.GitHub.com/articles/setting-up-a-custom-domain-with-GitHub-Pages" target="_blank" rel="nofollow">GitHub Pages</a>查看最新的 ip 即可</p>
+<p>www 指定的记录是你在 GitHub 注册的仓库。</p>
+<h3>去 GoDaddy 修改 DNS 地址</h3>
+<p>更改 <a href="https://link.jianshu.com?t=https://mya.godaddy.com" target="_blank" rel="nofollow">GoDaddy</a> 的 Nameservers 为 DNSpod 的 NameServers。</p>
+<p>1、点击你的账户，管理我的域名。</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 233px;">
+<div class="image-container-fill" style="padding-bottom: 23.39%;"></div>
+<div class="image-view" data-width="996" data-height="233"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-e9556783ec19fc4f.jpg" data-original-width="996" data-original-height="233" data-original-format="image/jpeg" data-original-filesize="51443"></div>
+</div>
+<div class="image-caption">&gt; 16 管理我的域名</div>
+</div>
+<p>2、点击域名。</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 612px; max-height: 374px;">
+<div class="image-container-fill" style="padding-bottom: 61.11%;"></div>
+<div class="image-view" data-width="612" data-height="374"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-f1538c2cfce35b1d.jpg" data-original-width="612" data-original-height="374" data-original-format="image/jpeg" data-original-filesize="45805"></div>
+</div>
+<div class="image-caption">&gt; 17 管理 DNS</div>
+</div>
+<p>3、将 GoDaddy 的 Nameservers 更改成 f1g1ns1.dnspod.net 和 f1g1ns2.dnspod.net</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 357px;">
+<div class="image-container-fill" style="padding-bottom: 50.349999999999994%;"></div>
+<div class="image-view" data-width="709" data-height="357"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-3f2f707a868a37f2.jpg" data-original-width="709" data-original-height="357" data-original-format="image/jpeg" data-original-filesize="45213"></div>
+</div>
+<div class="image-caption">&gt; 18 更改成 f1g1ns1.dnspod.net</div>
+</div>
+<p>如有不详可以看<a href="https://link.jianshu.com?t=https://support.dnspod.cn/Kb/showarticle/tsid/42/" target="_blank" rel="nofollow">DNSpod提供的官方帮助</a></p>
+<p>也可以看这里：<a href="https://link.jianshu.com?t=http://pchou.info/web-build/2013/01/05/build-GitHub-blog-page-03.html" target="_blank" rel="nofollow">一步步在GitHub上创建博客主页(3)</a></p>
+<h2>使用 GitHub Pages 建立博客</h2>
+<p>与 GitHub 建立好链接之后，就可以方便的使用它提供的 Pages 服务，GitHub Pages 分两种，一种是你的 GitHub 用户名建立的 username.GitHub.io 这样的用户&amp;组织页（站），另一种是依附项目的 Pages。</p>
+<p>想建立个人博客是用的第一种，形如 cnfeat.GitHub.io 这样的可访问的站，每个用户名下面只能建立一个。</p>
+<h3>Fork 已设置好的仓库</h3>
+<p>点击 <a href="https://link.jianshu.com?t=https://GitHub.com/cnfeat/blog.io/tree/master" target="_blank" rel="nofollow">cnfeat/blog.io</a></p>
+<p>点击右上角的 Fork</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 376px;">
+<div class="image-container-fill" style="padding-bottom: 37.15%;"></div>
+<div class="image-view" data-width="1012" data-height="376"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-842eaa9505c6b7ae.jpg" data-original-width="1012" data-original-height="376" data-original-format="image/jpeg" data-original-filesize="182589"></div>
+</div>
+<div class="image-caption">&gt; 19 Fork blog.io</div>
+</div>
+<p>这样，你就得到我的博客仓库了。</p>
+<p>你可以到</p>
+<p><a href="https://link.jianshu.com?t=https://GitHub.com/" target="_blank" rel="nofollow">https://GitHub.com/</a>你的用户名/<a href="https://link.jianshu.com?t=http://blog.io" target="_blank" rel="nofollow">blog.io</a></p>
+<p>确认一下</p>
+<p>然后将 blog.io 改成 你的 GitHub 用户名.GitHub.io</p>
+<p>例如我的就改成 cnfeat.GitHub.io</p>
+<p>改好之后，可以发现，'你的 GitHub 用户名.GitHub.io' 已经可以访问了。</p>
+<h2>将独立域名与 GitHub Pages 的空间绑定</h2>
+<h3>GitHub Pages 的设置</h3>
+<p>去到你的 blog.io 仓库，点击 CNAME ,再点击右下角的 铅笔 编辑，将 cnfeat.com 改成你的域名</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 253px;">
+<div class="image-container-fill" style="padding-bottom: 25.380000000000003%;"></div>
+<div class="image-view" data-width="997" data-height="253"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-47d565ff82a57fdd.jpg" data-original-width="997" data-original-height="253" data-original-format="image/jpeg" data-original-filesize="92098"></div>
+</div>
+<div class="image-caption">&gt; 20 修订 CNAME</div>
+</div>
+<p>这样，你再去你绑定的域名看看，估计已经导向到 '你的 GitHub 用户名.GitHub.io' 了。</p>
+<h2>搭建完成</h2>
+<p>至此，独立博客就算搭建完成，如需进步一完善请在参看以下文章或博客下留言。</p>
+<h2>如何更新博文</h2>
+<h3>安装 GitHub desktop</h3>
+<p>下载地址：<a href="https://link.jianshu.com?t=https://desktop.GitHub.com/" target="_blank" rel="nofollow">GitHub Desktop</a></p>
+<h3>找你的仓库 Git 地址</h3>
+<p>去到你的博客仓库：<a href="https://link.jianshu.com?t=https://GitHub.com/" target="_blank" rel="nofollow">https://GitHub.com/</a>你的用户名/<a href="https://link.jianshu.com?t=http://blog.io" target="_blank" rel="nofollow">blog.io</a></p>
+<p>复制 clone 地址</p>
+<p>例如我的就是</p>
+<blockquote>
+<p><a href="https://link.jianshu.com?t=https://github.com/cnfeat/blog.io.git" target="_blank" rel="nofollow">https://github.com/cnfeat/blog.io.git</a></p>
+</blockquote>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 572px;">
+<div class="image-container-fill" style="padding-bottom: 57.089999999999996%;"></div>
+<div class="image-view" data-width="1002" data-height="572"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-cb5b7dd47dc3e6c5.jpg" data-original-width="1002" data-original-height="572" data-original-format="image/jpeg" data-original-filesize="299728"></div>
+</div>
+<div class="image-caption">&gt; 22 复制 clone 地址 图</div>
+</div>
+<h3>clone 你仓库到本地</h3>
+<p>点击左上角的「+」号，选择 add，choose '你的 GitHub 用户名.GitHub.io' 文件夹。</p>
+<p>如此，你的本地博客仓库就已经和 GitHub 的仓库同步起来了。</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 675px; max-height: 487px;">
+<div class="image-container-fill" style="padding-bottom: 72.15%;"></div>
+<div class="image-view" data-width="675" data-height="487"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-f3f95dc175248ee3.jpg" data-original-width="675" data-original-height="487" data-original-format="image/jpeg" data-original-filesize="166834"></div>
+</div>
+<div class="image-caption">&gt; 21 clone 你仓库到本地</div>
+</div>
+<h3>修订 _posts 文件夹中的 md 文件</h3>
+<p>blog.io 仓库已经自带两篇文章模板，按照模板修改即可。</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 511px; max-height: 224px;">
+<div class="image-container-fill" style="padding-bottom: 43.84%;"></div>
+<div class="image-view" data-width="511" data-height="224"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-b83984371cb92758.jpg" data-original-width="511" data-original-height="224" data-original-format="image/jpeg" data-original-filesize="65366"></div>
+</div>
+<div class="image-caption">&gt; 23 按照模板修改</div>
+</div>
+<h3>推送文章更新</h3>
+<p>修订或新增完文章，再回到 GitHub desktop，点击同步更新即可。</p>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 580px;">
+<div class="image-container-fill" style="padding-bottom: 82.94%;"></div>
+<div class="image-view" data-width="932" data-height="773"><img data-original-src="//upload-images.jianshu.io/upload_images/32598-65af4a3b86db7208.jpg" data-original-width="932" data-original-height="773" data-original-format="image/jpeg" data-original-filesize="392358"></div>
+</div>
+<div class="image-caption">24 GitHub desktop 同步</div>
+</div>
+<h2>更新个人博客信息配置</h2>
+<p>自己把 blog.io 中文件都点开看一遍，主要配置文件是 _config.yml ，推荐使用 sublime 打开。</p>
+<p>修订清单如下，文档内有详细注释，可按注释逐个修订</p>
+<ul>
+<li>博客名字及作者信息：_config.yml</li>
+<li>个人介绍页面：about.md</li>
+<li>代表作页面：milestone.md</li>
+<li>文章模板：blog.io/_posts/2015-03-02-how-to-write.md</li>
+</ul>
+<h2>404页面</h2>
+<p>GitHub Pages有提供制作404页面的指引：<a href="https://link.jianshu.com?t=https://help.GitHub.com/articles/custom-404-Pages" target="_blank" rel="nofollow">Custom 404 Pages</a>。</p>
+<p>直接在根目录下创建自己的 404.html 或者 404.md 就可以。但是自定义404页面仅对绑定顶级域名的项目才起作用。</p>
+<p>推荐使用<a href="https://link.jianshu.com?t=http://www.qq.com/404" target="_blank" rel="nofollow">腾讯公益404</a>。</p>
+<h2>图床</h2>
+<p>推荐使用七牛（10G空间，免费）。</p>
+<h2>参考资料：</h2>
+<ul>
+<li>[1]<a href="https://link.jianshu.com?t=http://pchou.info/web-build/2013/01/03/build-GitHub-blog-page-01.html" target="_blank" rel="nofollow">一步步在GitHub上创建博客主页 全系列</a> by pchou（推荐）</li>
+<li>[2]网站优化：<a href="https://link.jianshu.com?t=http://pchou.info/web-build/2013/01/09/build-GitHub-blog-page-06.html" target="_blank" rel="nofollow">一步步在GitHub上创建博客主页(6)</a> by pchou （推荐）</li>
+<li>[3]<a href="https://link.jianshu.com?t=http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="nofollow">搭建一个免费的，无限流量的Blog----GitHub Pages和Jekyll入门</a> by 阮一峰（推荐）</li>
+<li>[4]<a href="https://link.jianshu.com?t=http://zipperary.com/2013/05/28/hexo-guide-2/" target="_blank" rel="nofollow">hexo系列教程：（二）搭建hexo博客</a> by zippera（推荐）</li>
+<li>[5]<a href="https://link.jianshu.com?t=http://zipperary.com/2013/05/29/hexo-guide-3/" target="_blank" rel="nofollow">hexo系列教程：（三）hexo博客的配置、使用</a>by zippera（推荐）</li>
+<li>[6]<a href="https://link.jianshu.com?t=http://zipperary.com/2013/05/30/hexo-guide-4/" target="_blank" rel="nofollow">hexo系列教程：（四）hexo博客的优化技巧</a> by zippera（推荐）</li>
+<li>[7]<a href="https://link.jianshu.com?t=http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="nofollow">hexo你的博客</a> by ibruce（推荐）</li>
+<li>[8]<a href="https://link.jianshu.com?t=http://yangjian.me/workspace/introducing-pacman-theme/" target="_blank" rel="nofollow">Pacman主题介绍</a> by yangjian（推荐）</li>
+<li>[9]<a href="https://link.jianshu.com?t=http://yangjian.me/workspace/building-blog-with-hexo/" target="_blank" rel="nofollow">使用hexo搭建博客</a> by yangjian（推荐）</li>
+<li>[10]<a href="https://link.jianshu.com?t=http://wuchong.me/blog/2014/01/24/change-to-pacman/" target="_blank" rel="nofollow">折腾了个Pacman主题</a> by wuchong（推荐）</li>
+<li>[11]hexo官方写作教程<a href="https://link.jianshu.com?t=http://hexo.io/docs/writing.html" target="_blank" rel="nofollow">「Writing」</a>
+</li>
+<li>[12]知乎上的教程：<a href="https://link.jianshu.com?t=http://www.zhihu.com/question/20463581" target="_blank" rel="nofollow">如何搭建个人独立博客？</a>
+</li>
+<li>[13]在GitHub Pages设置独立域名的官方教程：<a href="https://link.jianshu.com?t=https://help.GitHub.com/articles/setting-up-a-custom-domain-with-GitHub-Pages" target="_blank" rel="nofollow">[Setting up a custom domain with GitHub Pages]</a>
+</li>
+<li>[14]<a href="https://link.jianshu.com?t=http://beiyuu.com/GitHub-Pages/" target="_blank" rel="nofollow">使用GitHub Pages建独立博客</a> by beiyuu</li>
+<li>[15]<a href="https://link.jianshu.com?t=http://www.cnblogs.com/fnng/archive/2012/01/07/2315685.html" target="_blank" rel="nofollow">git/GitHub初级运用自如</a> by 虫师</li>
+<li>[16]<a href="https://link.jianshu.com?t=http://code.wileam.com/build-a-hexo-blog-and-optimize/" target="_blank" rel="nofollow">hexo搭建静态博客以及优化</a> by Joanna Wu</li>
+<li>[17]<a href="https://link.jianshu.com?t=http://c4fun.cn/blog/2014/03/03/use-hexo-blog/" target="_blank" rel="nofollow">使用Hexo搭建个人博客</a> by c4fun</li>
+<li>[18]<a href="https://link.jianshu.com?t=http://kescoode.com/2013/11/17/GitHub-page-and-hexo-guide/" target="_blank" rel="nofollow">GitHub Pages与Hexo建个人博客流程</a> by Kesco</li>
+<li>[19]<a href="https://link.jianshu.com?t=http://zipperary.com/2013/05/26/ssh-errors-with-GitHub/" target="_blank" rel="nofollow">Git push时重复输入用户名密码的问题</a> by zippera</li>
+<li>[20]<a href="https://link.jianshu.com?t=http://www.solarck.com/" target="_blank" rel="nofollow">hexo文件结构及网站优化</a> by kevin chen</li>
+</ul>
+<h2>相关链接</h2>
+<ul>
+<li>[1]<a href="https://link.jianshu.com?t=https://Pages.GitHub.com/" target="_blank" rel="nofollow">GitHub Pages主页</a>
+</li>
+<li>[2]<a href="https://link.jianshu.com?t=http://www.GoDaddy.com/" target="_blank" rel="nofollow">GoDaddy域名商</a>
+</li>
+<li>[3]<a href="https://link.jianshu.com?t=www.dnspod.cn" target="_blank" rel="nofollow">DNSPOD</a>
+</li>
+<li>[4]<a href="https://link.jianshu.com?t=http://hexo.io/" target="_blank" rel="nofollow">Hexo官方主页</a>
+</li>
+<li>[5]<a href="https://link.jianshu.com?t=http://www.worldhello.net/gotGitHub/index.html" target="_blank" rel="nofollow">GotGitHub：GitHub介绍</a>（推荐）</li>
+<li>[5]<a href="https://link.jianshu.com?t=http://www.faviconer.com/" target="_blank" rel="nofollow">图标制作网站：faviconer</a>
+</li>
+<li>[6]本地测试页<a href="https://link.jianshu.com?t=http://localhost:4000/" target="_blank" rel="nofollow">localhost:4000</a>
+</li>
+</ul>
+<h2><a href="https://link.jianshu.com?t=http://cnfeat.com/about/" target="_blank" rel="nofollow">关于我</a></h2>
+<p>这里有我的个人简介：<a href="https://link.jianshu.com?t=http://cnfeat.com/about/" target="_blank" rel="nofollow">关于我</a></p>
+<p>如果你想看到我最新的文章，可以关注我的微信公众号「cnfeat」。</p>
+<h3>ChangeLog</h3>
+<ul>
+<li>2017-06-21 修订盘古之白，文字说明，修复失效图片</li>
+<li>2015-11-10 01:07:55</li>
+<li>2015-11-06 01:21:21</li>
+</ul>
+
+          </div>
+        </div>
+    </div>
+
+    <!-- 连载目录项 -->
+
+    <!-- 打赏文章、购买文章、购买连载 -->
+        <div data-vcomp="free-reward-panel"></div>
+
+      <div class="show-foot">
+        <a class="notebook" href="/nb/61753">
+          <i class="iconfont ic-search-notebook"></i>
+          <span>读立写生</span>
+</a>        <div class="copyright" data-toggle="tooltip" data-html="true" data-original-title="转载请联系作者获得授权，并标注“简书作者”。">
+          © 著作权归作者所有
+        </div>
+        <div class="modal-wrap" data-report-note>
+          <a id="report-modal">举报文章</a>
+        </div>
+      </div>
+
+      <!-- 文章底部作者信息 -->
+        <div class="follow-detail">
+          <div class="info">
+            <a class="avatar" href="/u/c30afb47d730">
+              <img src="//upload.jianshu.io/users/upload_avatars/32598/%E7%BA%A2%E5%BF%83%E6%B5%B7%E8%B4%BC%E5%9B%A2__%E6%AD%A3.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>            <div props-data-classes="user-follow-button-footer" data-author-follow-button></div>
+            <a class="title" href="/u/c30afb47d730">陈素封</a>
+            <img class="badge-icon" data-toggle="tooltip" title="简书科技优秀作者" src="//upload.jianshu.io/user_badge/db3aaf4f-effd-43dc-9137-d6bf7f70211e" alt="Db3aaf4f effd 43dc 9137 d6bf7f70211e" />
+          </div>
+            <div class="signature">公众号：笨方法学写作
+
+博客：http://www.cnfeat.com
+个人微信号：cnfeat ，添加好友麻烦请标注「简书」。
+
+《笨方法学写作》课程正在连载。《笨方法学写作》，从 0 到 1 教你学写作，设置 52 个写作刻意练习，适合新手，从易到难，从快到慢，从技巧到方法，设置游戏升级体系，手把手教你写作，想方设法让你勤快练习，这一次彻底学会写作。
+
+更多请点：
+http://www.LearnWritingTheHardWay.cn</div>
+        </div>
+
+    <div class="meta-bottom">
+      <div class="btn like-group"></div>
+      <div class="share-group">
+        <a class="share-circle" data-action="weixin-share" data-toggle="tooltip" data-original-title="分享到微信">
+          <i class="iconfont ic-wechat"></i>
+        </a>
+        <a class="share-circle" data-action="weibo-share" data-toggle="tooltip" href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f=&#39;http://v.t.sina.com.cn/share/share.php?appkey=1881139527&#39;,u=z||d.location,p=[&#39;&amp;url=&#39;,e(u),&#39;&amp;title=&#39;,e(t||d.title),&#39;&amp;source=&#39;,e(r),&#39;&amp;sourceUrl=&#39;,e(l),&#39;&amp;content=&#39;,c||&#39;gb2312&#39;,&#39;&amp;pic=&#39;,e(p||&#39;&#39;)].join(&#39;&#39;);function%20a(){if(!window.open([f,p].join(&#39;&#39;),&#39;mb&#39;,[&#39;toolbar=0,status=0,resizable=1,width=440,height=430,left=&#39;,(s.width-440)/2,&#39;,top=&#39;,(s.height-430)/2].join(&#39;&#39;)))u.href=[f,p].join(&#39;&#39;);};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,&#39;&#39;,&#39;&#39;,&#39;http://cwb.assets.jianshu.io/notes/images/154777/weibo/image_1bbf29dc8f0d.jpg&#39;, &#39;推荐 @CNFeat 的文章《如何搭建一个独立博客——简明Github Pages与Hexo教程》（ 分享自 @简书 ）&#39;,&#39;https://www.jianshu.com/p/05289a4bc8b2?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=weibo&#39;,&#39;页面编码gb2312|utf-8默认gb2312&#39;));" data-original-title="分享到微博">
+          <i class="iconfont ic-weibo"></i>
+        </a>
+          <a class="share-circle" data-toggle="tooltip" href="http://cwb.assets.jianshu.io/notes/images/154777/weibo/image_1bbf29dc8f0d.jpg" target="_blank" data-original-title="下载长微博图片">
+            <i class="iconfont ic-picture"></i>
+          </a>
+        <a class="share-circle more-share" tabindex="0" data-toggle="popover" data-placement="top" data-html="true" data-trigger="focus" href="javascript:void(0);" data-content='
+          <ul class="share-list">
+            <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&#39;+e(&#39;https://www.jianshu.com/p/05289a4bc8b2?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=qzone&#39;)+&#39;&amp;title=&#39;+e(&#39;推荐 陈素封 的文章《如何搭建一个独立博客——简明Github Pages与Hexo教程》&#39;),x=function(){if(!window.open(r,&#39;qzone&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><i class="social-icon-sprite social-icon-zone"></i><span>分享到QQ空间</span></a></li>
+            <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://twitter.com/share?url=&#39;+e(&#39;https://www.jianshu.com/p/05289a4bc8b2?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=twitter&#39;)+&#39;&amp;text=&#39;+e(&#39;推荐 陈素封 的文章《如何搭建一个独立博客——简明Github Pages与Hexo教程》（ 分享自 @jianshucom ）&#39;)+&#39;&amp;related=&#39;+e(&#39;jianshucom&#39;),x=function(){if(!window.open(r,&#39;twitter&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><i class="social-icon-sprite social-icon-twitter"></i><span>分享到Twitter</span></a></li>
+            <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://www.facebook.com/dialog/share?app_id=483126645039390&amp;display=popup&amp;href=https://www.jianshu.com/p/05289a4bc8b2?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=facebook&#39;,x=function(){if(!window.open(r,&#39;facebook&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><i class="social-icon-sprite social-icon-facebook"></i><span>分享到Facebook</span></a></li>
+            <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://plus.google.com/share?url=&#39;+e(&#39;https://www.jianshu.com/p/05289a4bc8b2?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=google_plus&#39;),x=function(){if(!window.open(r,&#39;google_plus&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><i class="social-icon-sprite social-icon-google"></i><span>分享到Google+</span></a></li>
+            <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:&#39;&#39;,r=&#39;http://www.douban.com/recommend/?url=&#39;+e(&#39;https://www.jianshu.com/p/05289a4bc8b2?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=douban&#39;)+&#39;&amp;title=&#39;+e(&#39;如何搭建一个独立博客——简明Github Pages与Hexo教程&#39;)+&#39;&amp;sel=&#39;+e(s)+&#39;&amp;v=1&#39;,x=function(){if(!window.open(r,&#39;douban&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r+&#39;&amp;r=1&#39;};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()"><i class="social-icon-sprite social-icon-douban"></i><span>分享到豆瓣</span></a></li>
+          </ul>
+        '>更多分享</a>
+      </div>
+    </div>
+      <a id="web-note-ad-1" target="_blank" href="/apps/download?utm_source=nbc"><img src="//cdn2.jianshu.io/assets/web/web-note-ad-1-10f08e404d3887d2d45a4bc8f1831403.png" alt="Web note ad 1" /></a>
+    <div id="vue_comment"></div>
+  </div>
+
+  <div class="vue-side-tool" props-data-props-show-qr-code="0"></div>
+</div>
+<div class="note-bottom">
+  <div class="js-included-collections"></div>
+  <div data-vcomp="recommended-notes" data-lazy="1.5" data-note-id="154777"></div>
+  <!-- 相关文章 -->
+  <div class="seo-recommended-notes">
+
+        <div class="note have-img">
+          <a class="cover" target="_blank" href="/p/141abf1700da?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <img src="//upload-images.jianshu.io/upload_images/1080226-30f26dfbe44fd8e2.png?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="240" />
+</a>          <a class="title" target="_blank" href="/p/141abf1700da?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">如何搭建一个独立博客——简明Github Pages与Hexo教程</a>
+          <p class="description">摘要：这是一篇很详尽的独立博客搭建教程，里面介绍了域名注册、DNS设置、github和Hexo设置等过程，这是我写得最长的一篇教程。我想将我搭建独立博客的过程在一篇文章中尽可能详细地写出来，希望能给后来者一个明确的指引，同时用这篇教程开篇，正式开始我的第八大洲之旅。 前言 ...</p>
+          <a class="author" target="_blank" href="/u/25c26611d5d2?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <div class="avatar">
+              <img src="//cdn2.jianshu.io/assets/default_avatar/12-aeeea4bedf10f2a12c0d50d626951489.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48" alt="48" />
+            </div>
+            <span class="name">lishan3333</span>
+</a>        </div>
+
+        <div class="note have-img">
+          <a class="cover" target="_blank" href="/p/15ae47eddc56?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <img src="//upload-images.jianshu.io/upload_images/1712159-b460a3d917ed2ad7.png?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="240" />
+</a>          <a class="title" target="_blank" href="/p/15ae47eddc56?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">小白独立搭建博客--Github Pages和Hexo简明教程</a>
+          <p class="description">首先欢迎各位来参观我的博客：Ryane&#39;s Blog Github地址：https://github.com/ryanlijianchang/ryanlijianchang.github.io 摘要：这是一篇有关如何使用Github Pages和Hexo搭建自己独立博客的详...</p>
+          <a class="author" target="_blank" href="/u/08dc70a40fb1?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <div class="avatar">
+              <img src="//upload.jianshu.io/users/upload_avatars/1712159/7594aeb9cde4.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48" alt="48" />
+            </div>
+            <span class="name">RyaneLee</span>
+</a>        </div>
+
+        <div class="note ">
+                    <a class="title" target="_blank" href="/p/fe5b4b657778?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">如何搭建一个独立博客——简明Github与Hexo教程 </a>
+          <p class="description">前言 买过域名和主机，折腾过wordpress，个人博客也搭建起来了，本来是准备写技术文章，分享，但是折腾那些东西花费了太多的时间，认真写作反而少了。现在决定换成hexo写博客，专注写作分享，少折腾。 本文主要参考cnfeat的《如何搭建一个独立博客——简明Github P...</p>
+          <a class="author" target="_blank" href="/u/H28Gsp?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <div class="avatar">
+              <img src="//upload.jianshu.io/users/upload_avatars/8981/4af52aa43e4c.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48" alt="48" />
+            </div>
+            <span class="name">Vaayne</span>
+</a>        </div>
+
+        <div class="note ">
+                    <a class="title" target="_blank" href="/p/e0058573964c?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">如何搭建一个拥有个人域名又带点Geek味的独立博客</a>
+          <p class="description">本文首发于个人博客：Lam&#39;s Blog - 如何搭建一个拥有个人域名又带点Geek味的独立博客，文章由MarkDown语法编写，可能不同平台渲染效果不一，如果有存在排版错误图片无法显示等问题，烦请移至个人博客，后续更新也只会在个人博客修改，如果个人博客无法访问可以留言告诉...</p>
+          <a class="author" target="_blank" href="/u/d75db5b15748?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <div class="avatar">
+              <img src="//upload.jianshu.io/users/upload_avatars/3900981/0d807d86a3f5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48" alt="48" />
+            </div>
+            <span class="name">格子林ll</span>
+</a>        </div>
+
+        <div class="note have-img">
+          <a class="cover" target="_blank" href="/p/0af76a76b279?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <img src="//upload-images.jianshu.io/upload_images/7643792-098cdf07aa42ce18.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="240" />
+</a>          <a class="title" target="_blank" href="/p/0af76a76b279?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">Hexo + GitHub Pages 搭建博客的教程</a>
+          <p class="description">转载http://www.cnblogs.com/bxm0927/p/6927340.html 大概流程： 1. 搭建 Node.js 环境 2. 搭建 Git 环境 3. GitHub 注册和配置 4. 安装配置 Hexo 5. 关联 Hexo 与 GitHub Page...</p>
+          <a class="author" target="_blank" href="/u/d350a7dc50a9?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <div class="avatar">
+              <img src="//upload.jianshu.io/users/upload_avatars/7643792/c54ed288-517b-4bdb-9b39-3f0c701c6704?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48" alt="48" />
+            </div>
+            <span class="name">阿de牧</span>
+</a>        </div>
+
+        <div class="note have-img">
+          <a class="cover" target="_blank" href="/p/fc53d3e6fba4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <img src="//upload-images.jianshu.io/upload_images/3480470-6ce10339033c7cba.png?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="240" />
+</a>          <a class="title" target="_blank" href="/p/fc53d3e6fba4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">Python开发轻量级爬虫</a>
+          <p class="description">1.概述 对于轻量级爬虫： 只抓取静态页面 而对于高级的爬虫，需要考虑的因素就较多，如： 如何模拟登陆 验证码识别 分布式爬取网页 数据存储 网页更新 这些因素都具有重要的现实意义，但是对于初学者来讲，了解爬虫的基础架构显得更为必要，在实际应用场景中对其扩展可以爬取其他网页...</p>
+          <a class="author" target="_blank" href="/u/bd3fcd05a476?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <div class="avatar">
+              <img src="//cdn2.jianshu.io/assets/default_avatar/11-4d7c6ca89f439111aff57b23be1c73ba.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48" alt="48" />
+            </div>
+            <span class="name">victorsungo</span>
+</a>        </div>
+
+        <div class="note have-img">
+          <a class="cover" target="_blank" href="/p/0a70c19cca49?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <img src="//upload-images.jianshu.io/upload_images/7430461-5e96aacbd13b27b2.png?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="240" />
+</a>          <a class="title" target="_blank" href="/p/0a70c19cca49?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">青岛得八兄弟强势助力安徽畜博会-得八兄弟机械</a>
+          <p class="description">青岛得八兄弟机械有限公司是专业的养猪设备供应商。我们位于山东省青岛市，交通便利。自2010年成立以来，我们一直致力于研发和提供科学、高效的养猪设备。 公司技术工程师在畜牧业工程方面有十几年的经验。我们为全球养殖企业设计和提供先进的设备，如母猪产床，不锈钢喂食器，单体栏和一些...</p>
+          <a class="author" target="_blank" href="/u/f2638fccbe79?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <div class="avatar">
+              <img src="//upload.jianshu.io/users/upload_avatars/7430461/6d267a45-6f49-4e7d-ae24-7f1a06b7d509.png?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48" alt="48" />
+            </div>
+            <span class="name">环球新媒</span>
+</a>        </div>
+
+        <div class="note ">
+                    <a class="title" target="_blank" href="/p/cb344f8c1f37?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">关于自己的定位，未来的一些碎碎念</a>
+          <p class="description">今天胡sir过来督导，很高兴他能分享一些我自身存在的不足的地方的指引，其实也不算是指引吧，只是看到了一些我看不到的东西。本来想想，写篇个人督导记录就算了的，因为在工作时间，这更像是例行公事，也是自身烦恼的地方。不止如此，感觉越来越多的规则的出现，让自己不再是那么的看的透，总...</p>
+          <a class="author" target="_blank" href="/u/a02118f12959?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <div class="avatar">
+              <img src="//upload.jianshu.io/users/upload_avatars/4411369/593a829e-fc7e-4ff1-9fea-a05bf25f0df8?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48" alt="48" />
+            </div>
+            <span class="name">餘餘餘餘先生</span>
+</a>        </div>
+
+        <div class="note have-img">
+          <a class="cover" target="_blank" href="/p/5cfa63d85704?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <img src="//upload-images.jianshu.io/upload_images/2118992-bf92f212c34d577a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240" alt="240" />
+</a>          <a class="title" target="_blank" href="/p/5cfa63d85704?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">恩爱是秀死的，幸福是晒没的</a>
+          <p class="description">她，秀美颀长，性格泼辣，有一点小任性；他，魁梧英俊又多才多艺，什么吉他，竹笛、二胡等乐器全都无师自通。她和他都是单位里的佼佼者，恋爱便也成了顺理成章的事情。在同事们的眼里，他们是一对郎才女貌的壁人。 他们在别人的羡慕里迈进了婚姻的殿堂，夫唱妇随，手挽着手一起上班一起下班，走...</p>
+          <a class="author" target="_blank" href="/u/6318297949f2?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <div class="avatar">
+              <img src="//upload.jianshu.io/users/upload_avatars/2118992/264f397c5ee6?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48" alt="48" />
+            </div>
+            <span class="name">橙紫秋</span>
+</a>        </div>
+
+        <div class="note ">
+                    <a class="title" target="_blank" href="/p/4834f963647f?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">花开</a>
+          <p class="description">半朵 就妖娆了整个冬天</p>
+          <a class="author" target="_blank" href="/u/930d2301bcc2?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation">
+            <div class="avatar">
+              <img src="//upload.jianshu.io/users/upload_avatars/2811044/fd73dd05cad8.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48" alt="48" />
+            </div>
+            <span class="name">画辞</span>
+</a>        </div>
+  </div>
+</div>
+
+    <script type="application/json" data-name="page-data">{"user_signed_in":false,"locale":"zh-CN","os":"mac","read_mode":"day","read_font":"font2","note_show":{"is_martin_user":false,"is_author":false,"is_following_author":false,"is_liked_note":false,"follow_state":0,"uuid":"895ac154-712d-4f0a-8403-2159bc216418"},"note":{"id":154777,"slug":"05289a4bc8b2","user_id":32598,"notebook_id":61753,"commentable":true,"likes_count":640,"views_count":188791,"public_wordage":3588,"comments_count":113,"total_rewards_count":1,"is_author":false,"paid_type":"free","paid_content_accessible":false,"author":{"nickname":"陈素封","total_wordage":691936,"followers_count":6579,"total_likes_count":14809}}}</script>
+    
+    <script src="//cdn2.jianshu.io/assets/babel-polyfill-2bec152a537b07763933.js" crossorigin="anonymous"></script>
+    <script src="//cdn2.jianshu.io/assets/web-base-d3fc4ab93dcffa034270.js" crossorigin="anonymous"></script>
+<script src="//cdn2.jianshu.io/assets/web-fddd54aa16e4191df695.js" crossorigin="anonymous"></script>
+    
+    <script src="//cdn2.jianshu.io/assets/web/pages/notes/show/entry-7c525fbac1cd5e0be88d.js" crossorigin="anonymous"></script>
+    <script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+  </body>
+</html>
