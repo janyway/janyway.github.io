@@ -6,7 +6,7 @@ highlighter: rouge
 lsi: false
 permalink: /:title
 
-title: "Your Name"
+title: "Janyway Zhang's Page"
 description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
 baseurl: ""
 url: "http://himsel.me" # replace by your site's url
@@ -14,9 +14,9 @@ twitter_username: your-name
 github_username:  lukas-h # (your name)
 accent: "#f7f7e6" # accent color for blog column
 
-author: "Your Name"
-address: "Your Street, <br>Your City, Country"
-email: "your@email.com"
+author: "Janyway Zhang"
+address: "Yinhe Mansion, <br>Jinan, China"
+email: "janyway@qq.com"
 
 # google analytics tracking code, please change the value
 g_analytics: ""
