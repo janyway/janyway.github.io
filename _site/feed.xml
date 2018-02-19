@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Janyway Zhang</title>
+    <description>彼此莫相忘，不负好时光</description>
+    <link>http://janyway.com/</link>
+    <atom:link href="http://janyway.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 20 Feb 2018 06:25:31 +0800</pubDate>
+    <lastBuildDate>Tue, 20 Feb 2018 06:25:31 +0800</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Research</title>
+        <description>&lt;p&gt;I’m a Computer Scientist graduated from Zhejiang University, with my interest focusing on Computer Networks.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 20 Feb 2018 06:00:00 +0800</pubDate>
+        <link>http://janyway.com#2018-02-20-06</link>
+        <guid isPermaLink="true">/test</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Life</title>
+        <description>&lt;p&gt;Now I have come to the crossroad of my life.&lt;/p&gt;
+
+&lt;p&gt;I always knew what the right path was.&lt;/p&gt;
+
+&lt;p&gt;Without exception I knew.&lt;/p&gt;
+
+&lt;p&gt;But I never took it.&lt;/p&gt;
+
+&lt;p&gt;You know why?&lt;/p&gt;
+
+&lt;p&gt;It is too — damn — hard!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 16 Feb 2018 04:10:00 +0800</pubDate>
+        <link>http://janyway.com#2018-02-16-04</link>
+        <guid isPermaLink="true">/welcome</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

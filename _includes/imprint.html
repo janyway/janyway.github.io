@@ -1,0 +1,17 @@
+<h4>Contact</h4>
+<ul>
+    <li>
+        <p>Address<br><small>{{ site.address }}</small></p>
+    </li>
+    <li>
+        <p>Email<br><small>{{ site.email }}</small></p>
+    </li>
+	<li>
+        <p>QQ<br><small>{{ site.qq }}</small></p>
+    </li>
+    {% if site.g_analytics %}
+    <li>
+        <p><a href="https://www.google.com/analytics/terms/en.html">Google Analytics</a><br><small>Disclaimer</small></p>
+    </li>
+    {% endif %}
+</ul>
