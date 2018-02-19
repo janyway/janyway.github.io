@@ -6,20 +6,20 @@ highlighter: rouge
 lsi: false
 permalink: /:title
 
-title: "Janyway Zhang's Page"
-description: "不负好时光"
+title: "Janyway's Page"
+description: "彼此莫相忘，不负好时光"
 baseurl: ""
 url: "http://janyway.com" # replace by your site's url
 twitter_username: your-name
 github_username:  janyway # (your name)
-accent: "#B4EEB4" # accent color for blog column
+accent: "#BFEFFF" # accent color for blog column
 
 author: "Janyway Zhang"
 address: "Yinhe Mansion, Jinan, China"
 email: "janyway@qq.com"
 
 # google analytics tracking code, please change the value
-g_analytics: ""
+# g_analytics: ""
 
 # language settings
 isolang: en
