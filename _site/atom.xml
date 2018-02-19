@@ -4,7 +4,7 @@
  <title>Your Name</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000"/>
- <updated>2018-02-20T01:29:45+08:00</updated>
+ <updated>2018-02-20T01:31:14+08:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Your Name</name>
@@ -17,26 +17,11 @@
    <link href="http://localhost:4000#2016-11-06-06"/>
    <updated>2016-11-06T06:00:00+08:00</updated>
    <id>/test</id>
-   <content type="html">&lt;p&gt;I have some text.
-I want some &lt;em&gt;italics&lt;/em&gt;.
+   <content type="html">&lt;p&gt;I want some &lt;em&gt;italics&lt;/em&gt;.
 I want some &lt;strong&gt;bold&lt;/strong&gt;.&lt;/p&gt;
 &lt;h1 id=&quot;this-is-heading-1&quot;&gt;this is heading 1&lt;/h1&gt;
 &lt;h2 id=&quot;this-is-heading-2&quot;&gt;this is heading 2&lt;/h2&gt;
 &lt;h3 id=&quot;this-is-heading-3&quot;&gt;this is heading 3&lt;/h3&gt;
-
-&lt;p&gt;you want a list?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;first&lt;/li&gt;
-  &lt;li&gt;second&lt;/li&gt;
-  &lt;li&gt;third&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;you want an ordered list?&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;whatever&lt;/li&gt;
-  &lt;li&gt;whatever&lt;/li&gt;
-  &lt;li&gt;whatever&lt;/li&gt;
-&lt;/ol&gt;
 </content>
  </entry>
  
