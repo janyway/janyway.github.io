@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Janyway / Page"
+title                    : "Janyway / Pages"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
