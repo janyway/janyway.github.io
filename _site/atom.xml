@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>Your Name</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000"/>
- <updated>2018-02-20T01:31:14+08:00</updated>
- <id>http://localhost:4000</id>
+ <title>Janyway Zhang</title>
+ <link href="http://janyway.com/atom.xml" rel="self"/>
+ <link href="http://janyway.com"/>
+ <updated>2018-02-20T06:19:29+08:00</updated>
+ <id>http://janyway.com</id>
  <author>
-   <name>Your Name</name>
-   <email>your@email.com</email>
+   <name>Janyway Zhang</name>
+   <email>janyway@outlook.com</email>
  </author>
 
  
  <entry>
-   <title>Markdown flavour</title>
-   <link href="http://localhost:4000#2016-11-06-06"/>
-   <updated>2016-11-06T06:00:00+08:00</updated>
+   <title>Research</title>
+   <link href="http://janyway.com#2018-02-20-06"/>
+   <updated>2018-02-20T06:00:00+08:00</updated>
    <id>/test</id>
-   <content type="html">&lt;p&gt;I want some &lt;em&gt;italics&lt;/em&gt;.
-I want some &lt;strong&gt;bold&lt;/strong&gt;.&lt;/p&gt;
-&lt;h1 id=&quot;this-is-heading-1&quot;&gt;this is heading 1&lt;/h1&gt;
-&lt;h2 id=&quot;this-is-heading-2&quot;&gt;this is heading 2&lt;/h2&gt;
-&lt;h3 id=&quot;this-is-heading-3&quot;&gt;this is heading 3&lt;/h3&gt;
+   <content type="html">&lt;p&gt;I’m a Computer Scientist graduated from Zhejiang University, with my interest focusing on Computer Networks.&lt;/p&gt;
 </content>
  </entry>
  
  <entry>
-   <title>Welcome and Getting Started</title>
-   <link href="http://localhost:4000#2016-09-20-04"/>
-   <updated>2016-09-20T04:10:00+08:00</updated>
+   <title>Life</title>
+   <link href="http://janyway.com#2018-02-16-04"/>
+   <updated>2018-02-16T04:10:00+08:00</updated>
    <id>/welcome</id>
-   <content type="html">&lt;p&gt;Welcome to this jekyll theme!&lt;br /&gt;
-Edit &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; how you want, and see what happens…..&lt;/p&gt;
+   <content type="html">&lt;p&gt;Now I have come to the crossroad of my life.&lt;/p&gt;
+
+&lt;p&gt;I always knew what the right path was.&lt;/p&gt;
+
+&lt;p&gt;Without exception I knew.&lt;/p&gt;
+
+&lt;p&gt;But I never took it.&lt;/p&gt;
+
+&lt;p&gt;You know why?&lt;/p&gt;
+
+&lt;p&gt;It is too — damn — hard!&lt;/p&gt;
 </content>
  </entry>
  

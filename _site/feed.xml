@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your Name</title>
-    <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Feb 2018 01:31:14 +0800</pubDate>
-    <lastBuildDate>Tue, 20 Feb 2018 01:31:14 +0800</lastBuildDate>
+    <title>Janyway Zhang</title>
+    <description>彼此莫相忘，不负好时光</description>
+    <link>http://janyway.com/</link>
+    <atom:link href="http://janyway.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 20 Feb 2018 06:19:29 +0800</pubDate>
+    <lastBuildDate>Tue, 20 Feb 2018 06:19:29 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
-        <title>Markdown flavour</title>
-        <description>&lt;p&gt;I want some &lt;em&gt;italics&lt;/em&gt;.
-I want some &lt;strong&gt;bold&lt;/strong&gt;.&lt;/p&gt;
-&lt;h1 id=&quot;this-is-heading-1&quot;&gt;this is heading 1&lt;/h1&gt;
-&lt;h2 id=&quot;this-is-heading-2&quot;&gt;this is heading 2&lt;/h2&gt;
-&lt;h3 id=&quot;this-is-heading-3&quot;&gt;this is heading 3&lt;/h3&gt;
+        <title>Research</title>
+        <description>&lt;p&gt;I’m a Computer Scientist graduated from Zhejiang University, with my interest focusing on Computer Networks.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 06 Nov 2016 06:00:00 +0800</pubDate>
-        <link>http://localhost:4000#2016-11-06-06</link>
+        <pubDate>Tue, 20 Feb 2018 06:00:00 +0800</pubDate>
+        <link>http://janyway.com#2018-02-20-06</link>
         <guid isPermaLink="true">/test</guid>
         
         
       </item>
     
       <item>
-        <title>Welcome and Getting Started</title>
-        <description>&lt;p&gt;Welcome to this jekyll theme!&lt;br /&gt;
-Edit &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; how you want, and see what happens…..&lt;/p&gt;
+        <title>Life</title>
+        <description>&lt;p&gt;Now I have come to the crossroad of my life.&lt;/p&gt;
+
+&lt;p&gt;I always knew what the right path was.&lt;/p&gt;
+
+&lt;p&gt;Without exception I knew.&lt;/p&gt;
+
+&lt;p&gt;But I never took it.&lt;/p&gt;
+
+&lt;p&gt;You know why?&lt;/p&gt;
+
+&lt;p&gt;It is too — damn — hard!&lt;/p&gt;
 </description>
-        <pubDate>Tue, 20 Sep 2016 04:10:00 +0800</pubDate>
-        <link>http://localhost:4000#2016-09-20-04</link>
+        <pubDate>Fri, 16 Feb 2018 04:10:00 +0800</pubDate>
+        <link>http://janyway.com#2018-02-16-04</link>
         <guid isPermaLink="true">/welcome</guid>
-        
-        <category>example</category>
-        
-        <category>welcome</category>
         
         
       </item>
